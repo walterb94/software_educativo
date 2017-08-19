@@ -15,9 +15,9 @@ import static org.junit.Assert.*;
  *
  * @author walter
  */
-public class JUnitTest {
+public class SoftwareEducativoTest {
     
-    public JUnitTest() {
+    public SoftwareEducativoTest() {
     }
     
     @BeforeClass

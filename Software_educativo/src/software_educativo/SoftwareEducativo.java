@@ -9,7 +9,7 @@ package software_educativo;
  *
  * @author walter
  */
-public class Software_educativo {
+public class SoftwareEducativo {
 
     /**
      * @param args the command line arguments
