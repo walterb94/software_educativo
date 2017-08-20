@@ -56,4 +56,15 @@ public class SoftwareEducativoTest {
     //
     // @Test
     // public void hello() {}
+  @Test
+  public void testSuma(){
+      int resultado = SoftwareEducativo.suma(2, 3);
+      int esperado=5;
+      assertEquals(esperado, resultado);
+  }
+   public void testResta(){
+      int resultado = SoftwareEducativo.resta(12, 3);
+      int esperado=9;
+      assertEquals(esperado, resultado);
+  }
 }
