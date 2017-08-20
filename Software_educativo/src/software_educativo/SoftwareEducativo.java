@@ -31,6 +31,15 @@ public class SoftwareEducativo {
         int resultado = num1 + num2;
         return resultado;
     }
+    @SuppressWarnings("empty-statement")
+    public static int division (int nominador,int denominador){        
+        if(denominador == 0) { 
+            System.out.println("No puede dividir por cero");    
+            throw new ArithmeticException();
+        }
+        int resultado = nominador/denominador;
+        return resultado;
+    }
     
     }
     
