@@ -23,6 +23,14 @@ public class SoftwareEducativo {
         int resultado = nroUno*nroDos;
         return resultado;
     }
+    public static int resta (int num1, int num2){
+        int resultado = num1 - num2;
+        return resultado;        
+    }
+    public static int suma (int num1, int num2){
+        int resultado = num1 + num2;
+        return resultado;
+    }
     
     }
     
