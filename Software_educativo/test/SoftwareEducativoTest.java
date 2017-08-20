@@ -66,5 +66,6 @@ public class SoftwareEducativoTest {
       int resultado = SoftwareEducativo.resta(12, 3);
       int esperado=9;
       assertEquals(esperado, resultado);
+       System.out.println("borrar este msj");
   }
 }
