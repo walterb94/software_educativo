@@ -11,11 +11,19 @@ package software_educativo;
  */
 public class SoftwareEducativo {
 
+    
+
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
     }
+    public static int multiplicacion (int nroUno,int nroDos){        
+        int resultado = nroUno*nroDos;
+        return resultado;
+    }
     
-}
+    }
+    
+
