@@ -62,11 +62,20 @@ public class SoftwareEducativoTest {
       int esperado=5;
       assertEquals(esperado, resultado);
   }
+  @Test
    public void testResta(){
       int resultado = SoftwareEducativo.resta(12, 3);
       int esperado=9;
       assertEquals(esperado, resultado);
-       System.out.println("borrar este msj");
+      
   }
+   @Test
+   public void testDivision(){
+      float resultado = SoftwareEducativo.division(10, 2);
+      float esperado=5;
+      assertEquals(esperado, resultado ,0.001);
+        
+       
+   }
  
 }

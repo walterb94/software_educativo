@@ -40,55 +40,6 @@ public class SoftwareEducativo {
         int resultado = nominador/denominador;
         return resultado;
     }
-    class Usuario {
-    String usuario;
-    String contraseña;
-    TipoUsuario tipo;
-
-        public Usuario() {
-        }
-
-        public String getUsuario() {
-            return usuario;
-        }
-
-        public void setUsuario(String usuario) {
-            this.usuario = usuario;
-        }
-
-        public String getContraseña() {
-            return contraseña;
-        }
-
-        public void setContraseña(String contraseña) {
-            this.contraseña = contraseña;
-        }
-
-        public TipoUsuario getTipo() {
-            return tipo;
-        }
-
-        public void setTipo(TipoUsuario tipo) {
-            this.tipo = tipo;
-        }
-    
-    
-    }
-    class TipoUsuario {
-    String nombre;
-
-        public TipoUsuario() {
-        }
-
-        public String getNombre() {
-            return nombre;
-        }
-
-        public void setNombre(String nombre) {
-            this.nombre = nombre;
-        }
-    
-    }
     
     }
     
