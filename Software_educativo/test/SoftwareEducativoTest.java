@@ -43,6 +43,7 @@ public class SoftwareEducativoTest {
     int resultadoReal = SoftwareEducativo.multiplicacion(4, 50);
     int resultadoEsperado = 200;
     assertEquals(resultadoEsperado, resultadoReal);
+    
     /*int x = SoftwareEducativo.multiplicacion.resultado;
     float resultadoReal = EmpleadoBR.calculaSalarioBruto(
                            TipoEmpleado.vendedor, 2000.0f, 8.0f);
