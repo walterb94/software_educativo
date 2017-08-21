@@ -12,8 +12,10 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import software_educativo.Alumno;
 import software_educativo.EjercicioMatematico;
 import software_educativo.SoftwareEducativo;
+import software_educativo.Tutor;
 import software_educativo.Usuario;
 
 /**
@@ -109,28 +111,42 @@ public class SoftwareEducativoTest {
     public void isUsuarioUnicoTest(){
         List<Usuario> baseDeDatosTest=new ArrayList<Usuario>();
         Usuario usuarioAValidar= new Usuario(new Long(1),"nicolas","nico@utn.com");
-        Usuario u1=new Usuario(new Long(1),"nicolas","nico@utn.com");
         Usuario u2=new Usuario(new Long(2),"walter","walter@utn.com");
         Usuario u3=new Usuario(new Long(3),"fausto","fausto@utn.com");
-        baseDeDatosTest.add(u1);
+        baseDeDatosTest.add(usuarioAValidar);
         baseDeDatosTest.add(u2);
         baseDeDatosTest.add(u3);
         boolean resultado=Usuario.isUsuarioUnico(usuarioAValidar, baseDeDatosTest);
-        assertEquals(false,resultado);
+        assertEquals(true,resultado);
         
     }
     @Test
    public void testIsEjercicioUnico(){
        List<EjercicioMatematico> basededatos=new ArrayList<EjercicioMatematico>();
        EjercicioMatematico ejercicioValidar=new EjercicioMatematico(new Long(1),"x - 1 =");
-       EjercicioMatematico ej1=new EjercicioMatematico(new Long(1),"x - 1 =");
        EjercicioMatematico ej2=new EjercicioMatematico(new Long(2),"x - 2 =");
        EjercicioMatematico ej3=new EjercicioMatematico(new Long(3),"x - 3 =");
-       basededatos.add(ej1);
+       basededatos.add(ejercicioValidar);
        basededatos.add(ej2);
        basededatos.add(ej3);
        boolean resultado=EjercicioMatematico.isEjercicioUnico(ejercicioValidar, basededatos);
-       assertEquals(false, resultado);
+       assertEquals(true, resultado);
    }
+   @Test
+    public void test_verificarEmail(){
+       boolean esValido;
+       esValido = SoftwareEducativo.verificacionEmail("ingenieria_software@gmail.com");
+       assertTrue(esValido);
+   }
+    //11) Verificar que por cada usuario niño haya un usuario tutor asociado.
+    @Test
+    public void test_verificarAlumnoTutor(){
+        boolean esValido;
+        Alumno al = new Alumno("2222", new Tutor ("Pedro"));
+        esValido = SoftwareEducativo.alumnoTutor(al);
+        assertTrue(esValido);
+        
+        
+    }
 
 }
