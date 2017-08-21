@@ -57,7 +57,7 @@ public class SoftwareEducativoTest {
       int resultado = SoftwareEducativo.resta(12, 3);
       int esperado=9;
       assertEquals(esperado, resultado);
-       System.out.println("borrar este msj");
+      
   }
    //3)Verificar que el registro de alumnos exija una contraseña con al menos una mayúscula, un número.
    @Test
@@ -86,4 +86,20 @@ public class SoftwareEducativoTest {
      boolean resultadoEsperado = false; 
      assertEquals(resultadoEsperado, resultadoReal);
     }
+   @Test(expected = ArithmeticException.class)
+   public void testDivisionPorCero(){
+      int numerador = 5;
+      int divisor = 0;
+      SoftwareEducativo.division(numerador, divisor);
+      
+}
+   @Test
+   public void testDivision(){
+       int esperado=4;
+       int resultado= SoftwareEducativo.division(8,2);
+       assertEquals(esperado, resultado);
+       System.out.println("Test división correcto");
+   }
+
+   
 }
