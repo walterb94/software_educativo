@@ -109,28 +109,26 @@ public class SoftwareEducativoTest {
     public void isUsuarioUnicoTest(){
         List<Usuario> baseDeDatosTest=new ArrayList<Usuario>();
         Usuario usuarioAValidar= new Usuario(new Long(1),"nicolas","nico@utn.com");
-        Usuario u1=new Usuario(new Long(1),"nicolas","nico@utn.com");
         Usuario u2=new Usuario(new Long(2),"walter","walter@utn.com");
         Usuario u3=new Usuario(new Long(3),"fausto","fausto@utn.com");
-        baseDeDatosTest.add(u1);
+        baseDeDatosTest.add(usuarioAValidar);
         baseDeDatosTest.add(u2);
         baseDeDatosTest.add(u3);
         boolean resultado=Usuario.isUsuarioUnico(usuarioAValidar, baseDeDatosTest);
-        assertEquals(false,resultado);
+        assertEquals(true,resultado);
         
     }
     @Test
    public void testIsEjercicioUnico(){
        List<EjercicioMatematico> basededatos=new ArrayList<EjercicioMatematico>();
        EjercicioMatematico ejercicioValidar=new EjercicioMatematico(new Long(1),"x - 1 =");
-       EjercicioMatematico ej1=new EjercicioMatematico(new Long(1),"x - 1 =");
        EjercicioMatematico ej2=new EjercicioMatematico(new Long(2),"x - 2 =");
        EjercicioMatematico ej3=new EjercicioMatematico(new Long(3),"x - 3 =");
-       basededatos.add(ej1);
+       basededatos.add(ejercicioValidar);
        basededatos.add(ej2);
        basededatos.add(ej3);
        boolean resultado=EjercicioMatematico.isEjercicioUnico(ejercicioValidar, basededatos);
-       assertEquals(false, resultado);
+       assertEquals(true, resultado);
    }
 
 }
