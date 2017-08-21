@@ -95,6 +95,16 @@ public class SoftwareEducativo {
         }
         return valorRetorno;
     }
+    public static boolean verificarUsuario (String usuario) {
+        boolean verificacion;
+        if (usuario.length() > 5 && usuario.length() < 16){
+            verificacion = false;
+        } else {
+            verificacion = true;
+        }
+        return verificacion;
+                    
+        } 
     }
     
 

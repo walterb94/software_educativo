@@ -44,24 +44,15 @@ public class SoftwareEducativoTest {
     int resultadoEsperado = 200;
     assertEquals(resultadoEsperado, resultadoReal);
     
-    /*int x = SoftwareEducativo.multiplicacion.resultado;
-    float resultadoReal = EmpleadoBR.calculaSalarioBruto(
-                           TipoEmpleado.vendedor, 2000.0f, 8.0f);
-    float resultadoEsperado = 1360.0f;
-    assertEquals(resultadoEsperado, resultadoReal, 0.01);*/
   }
-//
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
+
   @Test
   public void testSuma(){
       int resultado = SoftwareEducativo.suma(2, 3);
       int esperado=5;
       assertEquals(esperado, resultado);
   }
+  @Test
    public void testResta(){
       int resultado = SoftwareEducativo.resta(12, 3);
       int esperado=9;
@@ -89,4 +80,10 @@ public class SoftwareEducativoTest {
        esValida = SoftwareEducativo.verificarContraseñaSinSimbolos("contrasena");
        assertTrue(esValida);
    }
+   @Test
+   public void testVerificarUsuario(){
+     boolean resultadoReal = SoftwareEducativo.verificarUsuario("dacanizzo");
+     boolean resultadoEsperado = false; 
+     assertEquals(resultadoEsperado, resultadoReal);
+    }
 }
