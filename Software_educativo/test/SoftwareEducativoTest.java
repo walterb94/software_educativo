@@ -12,8 +12,10 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import software_educativo.Alumno;
 import software_educativo.EjercicioMatematico;
 import software_educativo.SoftwareEducativo;
+import software_educativo.Tutor;
 import software_educativo.Usuario;
 
 /**
@@ -130,5 +132,21 @@ public class SoftwareEducativoTest {
        boolean resultado=EjercicioMatematico.isEjercicioUnico(ejercicioValidar, basededatos);
        assertEquals(true, resultado);
    }
+   @Test
+    public void test_verificarEmail(){
+       boolean esValido;
+       esValido = SoftwareEducativo.verificacionEmail("ingenieria_software@gmail.com");
+       assertTrue(esValido);
+   }
+    //11) Verificar que por cada usuario niño haya un usuario tutor asociado.
+    @Test
+    public void test_verificarAlumnoTutor(){
+        boolean esValido;
+        Alumno al = new Alumno("2222", new Tutor ("Pedro"));
+        esValido = SoftwareEducativo.alumnoTutor(al);
+        assertTrue(esValido);
+        
+        
+    }
 
 }

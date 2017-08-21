@@ -5,6 +5,9 @@
  */
 package software_educativo;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 
 /**
  *
@@ -110,6 +113,35 @@ public class SoftwareEducativo {
         return verificacion;
                     
         } 
+    public static boolean verificacionEmail(String email){
+        String email1 = email;
+        Pattern em = Pattern.compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
+                        + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
+        Matcher em1 = em.matcher(email1);
+        boolean emailVerif = true;
+        if(em1.find() == true){
+            emailVerif = true;
+        } else {
+            emailVerif = false;
+        }
+        
+    return emailVerif;
+    }
+    
+    public static boolean alumnoTutor (Alumno al){
+        Alumno alumno = al;
+        
+        boolean verifAsociacion;
+        if (alumno.getTutor().getNombre() != null){
+            verifAsociacion = true;
+        } else{
+            verifAsociacion = false;
+            
+        }
+        return verifAsociacion;
+        
+    }
+
     }
     
 
