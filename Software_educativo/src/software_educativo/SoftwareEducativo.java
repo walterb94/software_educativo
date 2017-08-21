@@ -5,6 +5,7 @@
  */
 package software_educativo;
 
+
 /**
  *
  * @author walter
@@ -40,7 +41,60 @@ public class SoftwareEducativo {
         int resultado = nominador/denominador;
         return resultado;
     }
+    /*public static boolean prueba(){
+        boolean comparacion;
+        comparacion = (5>3 && 5<7);
+        System.out.println(comparacion);
+        return comparacion;
+    }*/
     
+    //3)
+    public static boolean verificarMayusculaNumero(String contraseña1){
+        String contraseña = contraseña1;
+        boolean mayuscula = false;
+        boolean numero = false;
+        boolean mayusculaYnumero;
+        char c;
+        
+          for (int i = 0; i < contraseña.length(); i++) {
+            c = contraseña.charAt(i);
+            if (c>='A' && c<='Z') {
+                mayuscula = true;
+            } else {
+                    if ((c>='0'&& c<='9')) {
+                        numero = true;
+                }
+            }
+        }
+          mayusculaYnumero = (mayuscula && numero);
+          return mayusculaYnumero;
+        
+    }
+    //4)
+    public static boolean verificarLongitudContraseña(String contraseña1){
+        String contraseña = contraseña1;
+        
+        if (contraseña.length()>6 && contraseña.length()<16) {
+            return true;
+        } else{
+    return false;}
+    }
+    //5)
+    public static boolean verificarContraseñaSinSimbolos(String contraseña1){
+        String contraseña = contraseña1;
+        char c;
+        boolean valorRetorno = true;
+        for (int i = 0; i < contraseña.length(); i++) {
+            c = contraseña.charAt(i);
+            if ((c>='0'&& c<='9') || (c>='a' && c<='z') || (c>='A' && c<='Z')) {
+                valorRetorno = true;
+            } else {
+                valorRetorno = false;
+                break;
+            }
+        }
+        return valorRetorno;
+    }
     }
     
 

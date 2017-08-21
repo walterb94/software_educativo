@@ -68,5 +68,25 @@ public class SoftwareEducativoTest {
       assertEquals(esperado, resultado);
        System.out.println("borrar este msj");
   }
- 
+   //3)Verificar que el registro de alumnos exija una contraseña con al menos una mayúscula, un número.
+   @Test
+   public void test_VerificarContraseñaAlumnosConUnaMayusculaYNumero(){
+       boolean esCorrecto;
+       esCorrecto = SoftwareEducativo.verificarMayusculaNumero("contraseñA1");
+       assertTrue(esCorrecto);
+   }
+   //4)Verificar que la contraseña sea mayor a 6 caracteres y menor o igual a 15 caracteres de longitud 
+   @Test
+   public void test_verificacionLongitudContraseña(){
+       boolean esValida;
+       esValida= SoftwareEducativo.verificarLongitudContraseña("contraseña");
+       assertTrue(esValida);
+   }
+   //5)Verificar que la contraseña no contenga símbolos.
+   @Test
+   public void test_verificarContraseñaSinSimbolos(){
+       boolean esValida;
+       esValida = SoftwareEducativo.verificarContraseñaSinSimbolos("contrasena");
+       assertTrue(esValida);
+   }
 }
